@@ -29,6 +29,10 @@ i{
   color: limegreen;
 }
 
+.delete:hover,.delete:focus{
+    color:red;
+}
+
 /* layout */
 
 main, header{
@@ -59,6 +63,11 @@ textarea{
     resize:none;
 }
 
+.reply-input{
+    margin:10px 0 10px 40px;
+    width: 80%;
+}
+
 button{
     background-color: #1DA1F2;
     border: none;
@@ -69,6 +78,15 @@ button{
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
+}
+
+.reply-btn{
+    display: block;
+    padding:5px 9px;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 15px;
+    margin:auto 15px auto auto;
 }
 
 /* tweet */
