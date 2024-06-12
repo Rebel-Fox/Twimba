@@ -131,20 +131,9 @@ function getFeedHtml() {
     let feedHtml = ''
     tweetsData.forEach(function (tweetData) {
 
-        let likedIconClass = ''
-        let retweetedIconClass = ''
-        let deletIconTag = ''
-        if (tweetData.isLiked) {
-            likedIconClass = 'liked'
-        }
-
-        if (tweetData.isRetweeted) {
-            retweetedIconClass = "retweeted"
-        }
-
-        if (tweetData.handle === '@pocketmonsters') {
-            deletIconTag = `<span class='tweet-detail'><i class="fa-solid fa-trash delete" data-delete = '${tweetData.uuid}'></i></span>`
-        }
+        const likedIconClass =tweetData.isLiked ?'liked': ''
+        const retweetedIconClass = tweetData.isRetweeted ?"retweeted":''
+        const deletIconTag = tweetData.handle === '@pocketmonsters' ? `<span class='tweet-detail'><i class="fa-solid fa-trash delete" data-delete = '${tweetData.uuid}'></i></span>`:''
 
         let repliesHtml = `
         <textarea class='reply-input' id='reply-input-${tweetData.uuid}' placeholder='Post your reply'></textarea>
