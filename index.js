@@ -77,8 +77,8 @@ function handleReplyClick(replyId) {
             })[0]
 
             targetTweetObj.replies.unshift({
-                handle: '@pocketmonsters',
-                profilePic: `images/pokemon.png`,
+                handle: '@vineet',
+                profilePic: `images/vineet.jpeg`,
                 tweetText: replyInput.value
             })
             replyInput.value = ''
@@ -105,8 +105,8 @@ function handleTweetBtnClick() {
     const tweetInput = document.getElementById("tweet-input")
     if (tweetInput.value) {
         tweetsData.unshift({
-            handle: '@pocketmonsters',
-            profilePic: './images/pokemon.png',
+            handle: '@vineet',
+            profilePic: './images/vineet.jpeg',
             likes: 0,
             retweets: 0,
             tweetText: tweetInput.value,
@@ -133,7 +133,7 @@ function getFeedHtml() {
 
         const likedIconClass =tweetData.isLiked ?'liked': ''
         const retweetedIconClass = tweetData.isRetweeted ?"retweeted":''
-        const deletIconTag = tweetData.handle === '@pocketmonsters' ? `<span class='tweet-detail'><i class="fa-solid fa-trash delete" data-delete = '${tweetData.uuid}'></i></span>`:''
+        const deletIconTag = tweetData.handle === '@vineet' ? `<span class='tweet-detail'><i class="fa-solid fa-trash delete" data-delete = '${tweetData.uuid}'></i></span>`:''
 
         let repliesHtml = `
         <textarea class='reply-input' id='reply-input-${tweetData.uuid}' placeholder='Post your reply'></textarea>
